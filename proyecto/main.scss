@@ -1,0 +1,160 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+}
+
+/* ============== NAVEGACIÓN ============== */
+#menu li > a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f3f3f;
+
+  &:hover {
+    color: #0d6efd; // azul bootstrap
+  }
+}
+
+#menu form > button {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ============== SLIDER (STEEL BALL RUN) ============== */
+.carousel-item img {
+  height: 350px; 
+  width: 100%;
+  object-fit: cover; 
+}
+
+/* ============== INTRO ============== */
+#intro {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+    color: #1b2a4e;
+  }
+  p {
+    text-align: justify;
+    line-height: 1.6;
+  }
+}
+
+/* ============== PERSONAJES / EQUIPO ============== */
+.servicio-fila {
+  width: 90%;
+  text-align: left;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+/* ============== MAPA DEL RECORRIDO (SBR) ============== */
+.mapa {
+  background: url("./image/mapa.webp") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 350px;
+  height: 500px;
+}
+
+#local {
+  padding-bottom: 250px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #f8f9fa;
+}
+
+.wrapper {
+  width: 70%;
+  margin: auto;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* Números del mapa */
+#numeros-local {
+  margin-top: 20px;
+
+  div {
+    padding: 0 20px;
+    height: 48px;
+
+    &:not(:last-child) {
+      border-right: 2px solid #3f3f3f;
+    }
+
+    &:not(:first-child) {
+      padding-left: 20px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+/* ============== FORMULARIO DE CONTACTO ============== */
+#contenedor-formulario {
+  position: relative;
+  background: #fbfafa;
+  border-radius: 10px;
+  max-width: 400px;
+
+  h2 {
+    color: #1b2a4e;
+  }
+}
+
+/* ============== PIE DE PÁGINA ============== */
+footer {
+  background: #1b2a4e;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+
+  p {
+    color: #f3f3f3;
+    margin: 0;
+  }
+}
+
+#iconos i {
+  font-size: 26px;
+  padding: 0 10px;
+  color: #f3f3f3;
+
+  &:hover {
+    color: #0d6efd;
+  }
+}
+
+/* ============== MEDIA QUERIES ============== */
+@media (max-width: 768px){
+  #intro, #Personajes {
+    width: 90% !important;
+  }
+
+  .servicio-fila {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .icono-wrap {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+}
+
+/* ============== BOOTSTRAP ============== */
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
